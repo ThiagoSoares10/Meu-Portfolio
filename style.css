@@ -241,7 +241,7 @@ body {
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.42) 0px 2px 16px 0px;
 }
 
-#cabecalho-redes-social {
+.cabecalho-redes-social {
     width: 25px;
     color: #000;
     cursor: pointer;
@@ -430,7 +430,7 @@ body {
 }
 
 hr {
-    margin-top: 6rem;
+    margin-top: 4rem;
 }
 
 footer {
@@ -452,17 +452,25 @@ footer {
 }
 
 @media (max-width: 840px) {
+    .navegacao {
+        padding: 0 5%;
+    }
+
+    .logo {
+        z-index: 1;
+    }
+
     .menu {
         display: none;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         gap: 1.5rem;
         position: absolute;
-        height: 50vh;
+        height: 60vh;
         width: 100vw;
         top: 0;
         right: 0;
-        padding: 5rem;
         box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
         backdrop-filter: blur(10px);
         background-color: #f1f1f183;
@@ -476,10 +484,6 @@ footer {
 
     .menu li a {
         font-weight: 600;
-    }
-
-    .logo {
-        z-index: 1;
     }
 
     .navbar-toggle {
@@ -508,7 +512,6 @@ footer {
 
     .cabecalho-paragrafo {
         font-size: 1rem;
-
     }
 
     .cabecalho-icons-social {
@@ -521,7 +524,7 @@ footer {
         border: 2.5px solid #000;
     }
 
-    #cabecalho-redes-social {
+    .cabecalho-redes-social {
         width: 18px;
     }
 
@@ -578,4 +581,109 @@ footer {
 
 .navbar-toggle.active .bar:nth-child(3) {
     transform: translateY(-9.2px) rotate(-45deg);
+}
+
+@media (max-width: 350px) {
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .menu li a {
+        font-size: 1.2rem;
+    }
+
+    .bar {
+        height: 3.2px;
+        width: 22px;
+        margin: 2.5px 0;
+    }
+
+    .navbar-toggle.active .bar:nth-child(1) {
+        transform: translateY(4px) rotate(45deg);
+    }
+
+    .navbar-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .navbar-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .cabecalho-foto-perfil {
+        width: 15rem;
+    }
+
+    .cabecalho-titulo {
+        font-size: 1.6rem;
+    }
+
+    .cabecalho-paragrafo {
+        font-size: 0.8rem;
+    }
+
+    .cabecalho-circulo-icons-social {
+        width: 30px;
+        height: 30px;
+        border: 1.8px solid #000;
+    }
+
+    .cabecalho-redes-social {
+        width: 14px;
+    }
+
+    .sobre-titulo {
+        font-size: 1.3rem;
+    }
+
+    .sobre-caixa {
+        max-width: 280px;
+    }
+
+    .sobre-paragrafo {
+        font-size: 0.8rem;
+    }
+
+    .projetos-titulo {
+        font-size: 1.3rem;
+    }
+
+    .projetos-card {
+        max-width: 280px;
+    }
+
+    .projetos-imagem {
+        height: 280px;
+        width: 100%;
+    }
+
+    .info-projetos {
+        font-size: 1rem;
+    }
+
+    .projeto-btn {
+        padding: 3px 10px;
+        font-size: 0.7rem;
+    }
+
+    .projeto-tecnologia-img h4 {
+        font-size: 0.9rem;
+    }
+
+    .projeto-tecnologia-img img {
+        width: 90px;
+        height: 27px;
+    }
+
+    .contatos-titulo {
+        font-size: 1.3rem;
+    }
+
+    .contatos-menu li a {
+        font-size: 0.8rem;
+    }
+
+    .footer-paragrafo {
+        font-size: 10px;
+    }
 }

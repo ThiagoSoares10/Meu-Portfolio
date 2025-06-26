@@ -1,8 +1,8 @@
 // script.js
 const menu = document.querySelector('.menu');
-const navbarToggle = document.querySelector('.navbar-toggle');
+const navegacaoToggle = document.querySelector('.navegacao-toggle');
 
-navbarToggle.addEventListener('click', () => {
-    navbarToggle.classList.toggle('active');
+navegacaoToggle.addEventListener('click', () => {
+    navegacaoToggle.classList.toggle('active');
     menu.classList.toggle('active');
 });

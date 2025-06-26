@@ -16,11 +16,10 @@ html {
 }
 
 body {
-    background-color: #ffffff;
+    background-color: #fff;
 }
 
-.chuva {
-    position: absolute;
+.chuva-animado {
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -122,6 +121,7 @@ body {
     position: fixed;
     z-index: 9;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    transition: all .4s;
 }
 
 .logo {
@@ -153,7 +153,7 @@ body {
     height: 2px;
     bottom: -3px;
     opacity: 0.7;
-    transition: all .2s;
+    transition: all .4s;
 }
 
 .menu li a:hover::before {
@@ -161,39 +161,52 @@ body {
     left: 0%;
 }
 
-.navbar-toggle {
+.navegacao-toggle {
     display: none;
-    flex-direction: column;
+    padding: 10px;
     cursor: pointer;
+    background: transparent;
 }
 
 .bar {
     display: block;
-    height: 4px;
-    width: 32px;
-    margin: 4px 0;
+    height: 3px;
+    width: 25px;
+    margin: 5px 0;
     border-radius: 10px;
-    background-color: #000;
-    transition: all .2s;
+    background: #000;
+    transition: all .1s ease-in-out;
 }
 
 .cabecalho {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     width: 100%;
     height: 100vh;
-    padding-top: 5rem;
+    padding: 0rem 1rem;
+    transition: all .4s;
+}
+
+.cabecalho-perfil {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20rem;
+    box-shadow: rgba(0, 0, 0, 0.9) 0px 2px 4px, rgba(0, 0, 0, 0.9) 0px 7px 13px -3px, rgba(0, 0, 0, 0.9) 0px -3px 0px inset;
+    border-radius: 50%;
+    overflow: hidden;
+    animation: flutuar 4s ease-in-out infinite;
+    transition: all .4s;
+    margin-top: 1rem;
+    background-color: #fff;
 }
 
 .cabecalho-foto-perfil {
-    width: 25rem;
-    border-radius: 50%;
-    box-shadow: rgba(0, 0, 0, 0.9) 0px 2px 4px, rgba(0, 0, 0, 0.9) 0px 7px 13px -3px, rgba(0, 0, 0, 0.9) 0px -3px 0px inset;
-    animation: flutuar 4s ease-in-out infinite;
-    background-color: #fff;
-    transition: all .4s;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .cabecalho-titulo-paragrafo {
@@ -213,17 +226,13 @@ body {
     transition: all .4s;
 }
 
-.cabecalho-icons-social {
+.cabecalho-caixa {
     display: flex;
     margin-top: 20px;
     gap: 10px;
 }
 
-.cabecalho-icons-social a {
-    display: flex;
-}
-
-.cabecalho-circulo-icons-social {
+.cabecalho-circulo {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -237,11 +246,15 @@ body {
     transition: all .4s;
 }
 
-.cabecalho-circulo-icons-social:hover {
+.cabecalho-circulo:hover {
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.42) 0px 2px 16px 0px;
 }
 
-.cabecalho-redes-social {
+.cabecalho-link {
+    display: flex;
+}
+
+.cabecalho-redes-social-img {
     width: 25px;
     color: #000;
     cursor: pointer;
@@ -261,59 +274,61 @@ body {
 }
 
 .sobre {
-    padding: 6rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+
 }
 
 .sobre-titulo {
     font-size: 3rem;
     text-align: center;
-    margin-bottom: 20px;
-    transition: .4s;
+    margin-bottom: 25px;
+    transition: all .4s;
 }
 
 .sobre-caixa {
-    padding: 2rem;
-    max-width: 800px;
-    margin: 0 auto;
+    padding: 1rem;
+    width: 50rem;
     border: 2px solid #242424;
     border-radius: 16px;
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.42) 0px 2px 16px 0px;
-    background-color: #fff;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px;
+    transition: all .4s;
 }
 
 .sobre-paragrafo {
     text-align: center;
     font-size: 1.2rem;
-    transition: .4s;
+    transition: all .4s;
 }
 
 .projetos {
-    padding: 6rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    padding: 0rem 1rem;
+    transition: all .4s;
 }
 
 .projetos-titulo {
     text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 50px;
-    transition: .4s;
-}
-
-.projetos-caixa {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin: 0 auto;
-    max-width: 28rem;
+    font-size: 3rem;
+    margin-bottom: 25px;
+    transition: all .4s;
 }
 
 .projetos-card {
     border-radius: 16px;
-    overflow: hidden;
     transition: all 0.5s ease;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     padding: 1rem;
     background-color: #fff;
-    transition: .4s;
 }
 
 .projetos-card:hover {
@@ -321,38 +336,29 @@ body {
 }
 
 .projetos-imagem {
-    height: 320px;
+    height: 300px;
     width: 100%;
     object-fit: cover;
-    padding: 0 auto;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border: 3px solid #ececec;
 }
 
-.caixa-textos-projeto {
-    padding: 1rem;
-}
-
-.info-projetos {
-    margin-bottom: 5px;
+.projetos-sub_titulo {
     text-align: center;
+    margin: 10px 0;
+    transition: all .4s;
 }
 
-.paragrafo-projetos {
-    line-height: 1.25rem;
-    text-align: center;
-}
-
-.projeto-codigo {
+.projetos-live_demo-github {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
+    margin: 10px 0;
 }
 
-.projeto-btn {
-    padding: 5px 15px;
+.projetos-btn {
+    padding: 5px 10px;
     border-radius: 30px;
     margin: 0 10px;
     cursor: pointer;
@@ -362,21 +368,27 @@ body {
     transition: all .4s;
 }
 
-.projeto-btn:hover {
+.projetos-btn:hover {
     color: #fff;
     background-color: #000;
 }
 
-.projeto-tecnologia-img {
+.projetos-mini_titulo-tecnologia_img {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-.projeto-tecnologia-img img {
+.projetos-mini_titulo {
+    font-weight: 600;
+    transition: all .4s;
+}
+
+.projetos-tecnologia_img {
     width: 115px;
     height: 35px;
     margin: 5px 0;
+    transition: all .4s;
 }
 
 .contatos {
@@ -384,12 +396,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 6rem;
-}
-
-.contatos-menu {
-    display: flex;
-    align-items: center;
+    padding-top: 6rem 1rem;
 }
 
 .contatos-titulo {
@@ -398,38 +405,77 @@ body {
     transition: all .4s;
 }
 
-.contatos-menu li {
-    margin: 20px 10px;
+.contatos-caixa {
+    display: flex;
+    margin-top: 20px;
+    gap: 10px;
 }
 
-.contatos-menu li a {
+.contatos-circulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 3px solid #000;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #fff;
+    margin: 0 2px;
+    transition: all .4s;
+}
+
+.contatos-circulo:hover {
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.42) 0px 2px 16px 0px;
+}
+
+.contatos-link {
+    display: flex;
+}
+
+.contatos-redes-social-img {
+    width: 18px;
+    transition: all .4s;
+    cursor: pointer;
+}
+
+.menu-link {
+    display: flex;
+    align-items: center;
+}
+
+.menu-link li {
+    margin: 20px 10px;
+    transition: all .4s;
+}
+
+.menu-link a {
     color: #000;
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin: 0 3px;
     transition: .5s;
     font-weight: 450;
     position: relative;
-    transition: all .4s;
 }
 
-.contatos-menu li a::before {
+.menu-link a::before {
     content: "";
     position: absolute;
     width: 0;
     background: #000;
     left: 50%;
     height: 2px;
-    bottom: 0;
-    transition: all .3s;
+    bottom: -3px;
     opacity: 0.7;
+    transition: all .4s;
 }
 
-.contatos-menu li a:hover::before {
+.menu-link a:hover::before {
     width: 100%;
     left: 0;
 }
 
-hr {
+.linha-horizontal {
     margin-top: 4rem;
 }
 
@@ -442,128 +488,163 @@ footer {
     text-align: center;
     font-weight: 600;
     padding: 0 1rem;
+    transition: all .4s;
 }
 
 /*Tela de celular*/
-@media (max-width: 1230px) {
+@media (max-width: 1200px) {
     .navegacao {
-        padding: 0 2%;
+        padding: 0 4%;
     }
 }
 
-@media (max-width: 840px) {
-    .navegacao {
-        padding: 0 5%;
-    }
-
+@media (max-width: 910px) {
     .logo {
-        z-index: 1;
+        z-index: 9;
     }
 
     .menu {
         display: none;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 1.5rem;
+        gap: 1.7rem;
         position: absolute;
-        height: 60vh;
-        width: 100vw;
+        height: 50vh;
+        width: 100%;
         top: 0;
         right: 0;
+        padding: 5rem 1.5rem;
         box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
-        backdrop-filter: blur(10px);
-        background-color: #f1f1f183;
-        border-bottom-left-radius: 25px;
-        border-bottom-right-radius: 25px;
+        backdrop-filter: blur(20px);
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    .menu li a::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        background: #000000;
+        left: 50%;
+        height: 3px;
+        bottom: -3px;
+    }
+
+    .menu li a {
+        font-weight: 650;
     }
 
     .menu.active {
         display: flex;
     }
 
-    .menu li a {
-        font-weight: 600;
+    .navegacao-toggle {
+        display: block;
+        z-index: 9;
     }
 
-    .navbar-toggle {
-        display: block;
-        z-index: 1;
+    .navegacao-toggle.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(-45deg);
     }
+
+    .navegacao-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .navegacao-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(45deg);
+    }
+
+    .sobre-caixa {
+        width: 30rem;
+    }
+
 }
 
-@media (max-width: 500px) {
+@media (max-width: 526px) {
     .logo {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 
-    .bar {
-        height: 3.5px;
-        width: 30px;
+    .cabecalho {
+        padding-top: none;
     }
 
-    .cabecalho-foto-perfil {
-        width: 18rem;
+    .cabecalho-perfil {
+        width: 14rem;
+        height: 14rem;
     }
 
     .cabecalho-titulo {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .cabecalho-paragrafo {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
-    .cabecalho-icons-social {
-        margin-top: 10px;
-    }
-
-    .cabecalho-circulo-icons-social {
+    .cabecalho-circulo {
         width: 35px;
         height: 35px;
-        border: 2.5px solid #000;
+        border: 2px solid #000;
     }
 
-    .cabecalho-redes-social {
-        width: 18px;
+    .cabecalho-redes-social-img {
+        width: 16px;
     }
 
     .sobre {
-        padding: 0 1rem;
-    }
-
-    .sobre-titulo {
-        font-size: 1.7rem;
-    }
-
-    .sobre-paragrafo {
-        font-size: 1rem;
-    }
-
-    .projetos {
-        padding: 4rem 1rem;
-    }
-
-    .projetos-titulo {
-        font-size: 1.7rem;
-        margin-bottom: 35px;
-    }
-
-    .contatos {
         padding: 0rem 1rem;
     }
 
-    .contatos-titulo {
-        font-size: 1.7rem;
+    .sobre-titulo {
+        font-size: 1.5rem;
     }
 
-    .contatos-menu li a {
+    .sobre-caixa {
+        width: 25rem;
+    }
+
+    .sobre-paragrafo {
+        font-size: 1rem
+    }
+
+    .projetos-titulo {
+        font-size: 1.5rem;
+    }
+
+    .projetos-sub_titulo {
         font-size: 1rem;
-        margin: none
     }
 
-    hr {
-        margin-top: 0rem;
+    .projetos-btn {
+        font-size: 0.7rem;
+    }
+
+    .projetos-mini_titulo {
+        font-size: 0.9rem;
+    }
+
+    .projetos-tecnologia_img {
+        width: 100px;
+        height: 30px;
+    }
+
+    .contatos-titulo {
+        font-size: 1.5rem;
+    }
+
+    .contatos-circulo {
+        width: 35px;
+        height: 35px;
+        border: 2px solid #000;
+    }
+
+    .contatos-redes-social-img {
+        width: 16px;
+    }
+
+    .menu-link li {
+        margin: 20px 5px;
     }
 
     .footer-paragrafo {
@@ -571,119 +652,38 @@ footer {
     }
 }
 
-.navbar-toggle.active .bar:nth-child(1) {
-    transform: translateY(7.2px) rotate(45deg);
+@media (max-width: 496px) {
+    .sobre-caixa {
+        width: 22rem;
+    }
+
+    .sobre-paragrafo {
+        font-size: 0.9rem
+    }
 }
 
-.navbar-toggle.active .bar:nth-child(2) {
-    opacity: 0;
-}
-
-.navbar-toggle.active .bar:nth-child(3) {
-    transform: translateY(-9.2px) rotate(-45deg);
-}
-
-@media (max-width: 350px) {
+@media (max-width: 366px) {
     .logo {
         font-size: 1.2rem;
     }
 
-    .menu li a {
-        font-size: 1.2rem;
-    }
-
-    .bar {
-        height: 3.2px;
-        width: 22px;
-        margin: 2.5px 0;
-    }
-
-    .navbar-toggle.active .bar:nth-child(1) {
-        transform: translateY(4px) rotate(45deg);
-    }
-
-    .navbar-toggle.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .navbar-toggle.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-
-    .cabecalho-foto-perfil {
-        width: 15rem;
-    }
-
-    .cabecalho-titulo {
-        font-size: 1.6rem;
-    }
-
-    .cabecalho-paragrafo {
-        font-size: 0.8rem;
-    }
-
-    .cabecalho-circulo-icons-social {
-        width: 30px;
-        height: 30px;
-        border: 1.8px solid #000;
-    }
-
-    .cabecalho-redes-social {
-        width: 14px;
-    }
-
-    .sobre-titulo {
-        font-size: 1.3rem;
-    }
-
     .sobre-caixa {
-        max-width: 280px;
+        width: 18rem;
     }
 
-    .sobre-paragrafo {
-        font-size: 0.8rem;
-    }
-
-    .projetos-titulo {
-        font-size: 1.3rem;
-    }
-
-    .projetos-card {
-        max-width: 280px;
+    .cabecalho-perfil {
+        width: 14rem;
     }
 
     .projetos-imagem {
-        height: 280px;
-        width: 100%;
+height: 10rem;
     }
 
-    .info-projetos {
-        font-size: 1rem;
-    }
-
-    .projeto-btn {
-        padding: 3px 10px;
-        font-size: 0.7rem;
-    }
-
-    .projeto-tecnologia-img h4 {
-        font-size: 0.9rem;
-    }
-
-    .projeto-tecnologia-img img {
-        width: 90px;
-        height: 27px;
-    }
-
-    .contatos-titulo {
-        font-size: 1.3rem;
-    }
-
-    .contatos-menu li a {
+    .menu-link li a {
         font-size: 0.8rem;
     }
 
     .footer-paragrafo {
-        font-size: 10px;
+        font-size: 9px;
     }
 }

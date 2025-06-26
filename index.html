@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <div class="chuva">
+    <div class="chuva-animado">
         <div class="gota"></div>
         <div class="gota"></div>
         <div class="gota"></div>
@@ -42,7 +42,7 @@
             <li><a href="#contatos">Contatos</a></li>
         </ul>
 
-        <div class="navbar-toggle">
+        <div class="navegacao-toggle">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
@@ -50,29 +50,38 @@
     </nav>
 
     <section id="inicio" class="cabecalho">
-        <img src="imagem/thiago-foto-perfil.png" alt="" class="cabecalho-foto-perfil">
+        <div class="cabecalho-perfil">
+            <img src="imagem/thiago-foto-perfil.png" alt="" class="cabecalho-foto-perfil">
+        </div>
 
         <div class="cabecalho-titulo-paragrafo">
             <h1 class="cabecalho-titulo">Thiago Soares</h1>
             <p class="cabecalho-paragrafo">Desenvolvedor Front End</p>
         </div>
 
-        <div class="cabecalho-icons-social">
-            <div class="cabecalho-circulo-icons-social">
-                <a href="https://www.linkedin.com/in/thiago-soares-a61593265/" target="_blank"
-                    rel="noopener noreferrer"> <img src="imagem/icon-linkedin.svg" class="cabecalho-redes-social">
+        <div class="cabecalho-caixa">
+
+            <div class="cabecalho-circulo">
+                <a href="https://www.linkedin.com/in/thiago-soares-a61593265/" target="_blank" rel="noopener noreferrer"
+                    class="cabecalho-link">
+
+                    <img src="imagem/icon-linkedin.svg" class="cabecalho-redes-social-img">
                 </a>
             </div>
 
-            <div class="cabecalho-circulo-icons-social">
-                <a href="https://github.com/ThiagoSoares10" target="_blank"><img src="imagem/icon-github.svg"
-                        class="cabecalho-redes-social">
+            <div class="cabecalho-circulo">
+                <a href="https://github.com/ThiagoSoares10" target="_blank" rel="noopener noreferrer"
+                    class="cabecalho-link">
+
+                    <img src="imagem/icon-github.svg" class="cabecalho-redes-social-img">
                 </a>
             </div>
 
-            <div class="cabecalho-circulo-icons-social">
-                <a href="https://www.instagram.com/ts.thiiagosoares/?igsh=Mnp1YXczZmp0cHZ4#" target="_blank"><img
-                        src="imagem/icon-instagram.svg" class="cabecalho-redes-social">
+            <div class="cabecalho-circulo">
+                <a href="https://www.instagram.com/ts.thiiagosoares?igsh=Mnp1YXczZmp0cHZ4" target="_blank"
+                    rel="noopener noreferrer" class="cabecalho-link">
+
+                    <img src="imagem/icon-instagram.svg" class="cabecalho-redes-social-img">
                 </a>
             </div>
         </div>
@@ -93,26 +102,25 @@
     <section id="projetos" class="projetos">
         <h2 class="projetos-titulo">Meus Projetos</h2>
 
-        <div class="projetos-caixa">
-            <div class="projetos-card">
-                <img src="imagem/projeto meu portfólio.png" class="projetos-imagem">
-                <div class="caixa-textos-projeto">
-                    <h3 class="info-projetos">Portfólio + responsivo</h3>
-                </div>
+        <div class="projetos-card">
+            <img src="imagem/projeto meu portfólio.png" class="projetos-imagem">
 
-                <div class="projeto-codigo">
-                    <a href="video/apresentação projeto meu portfólio.mp4" target="_blank"><button class="projeto-btn">Live
-                            demo</button></a>
+            <h3 class="projetos-sub_titulo">Portfólio + responsivo</h3>
 
-                    <a href="https://github.com/ThiagoSoares10" target="_blank"><button
-                            class="projeto-btn">Github</button>
-                    </a>
-                </div>
+            <div class="projetos-live_demo-github">
+                <a href="video/apresentação do projeto meu portfólio.mp4" target="_blank" rel="noopener noreferrer">
+                    <button class="projetos-btn">Live
+                        demo</button>
+                </a>
 
-                <div class="projeto-tecnologia-img">
-                    <h4>Tecnologia utilizada:</h4>
-                    <img src="imagem/html, css e javascript - logo.png">
-                </div>
+                <a href="https://github.com/ThiagoSoares10" target="_blank" rel="noopener noreferrer">
+                    <button class="projetos-btn">Github</button>
+                </a>
+            </div>
+
+            <div class="projetos-mini_titulo-tecnologia_img">
+                <h4 class="projetos-mini_titulo">Tecnologia utilizada:</h4>
+                <img src="imagem/html, css e javascript - logo.png" class="projetos-tecnologia_img">
             </div>
         </div>
     </section>
@@ -120,27 +128,34 @@
     <section id="contatos" class="contatos">
         <h2 class="contatos-titulo">Contatos</h2>
 
-        <div class="cabecalho-icons-social">
-            <div class="cabecalho-circulo-icons-social">
-                <a href="https://www.linkedin.com/in/thiago-soares-a61593265/" target="_blank"><img
-                        src="imagem/icon-linkedin.svg" class="cabecalho-redes-social">
+        <div class="contatos-caixa">
+
+            <div class="contatos-circulo">
+                <a href="https://www.linkedin.com/in/thiago-soares-a61593265/" target="_blank" rel="noopener noreferrer"
+                    class="contatos-link">
+
+                    <img src="imagem/icon-linkedin.svg" class="contatos-redes-social-img">
                 </a>
             </div>
 
-            <div class="cabecalho-circulo-icons-social">
-                <a href="https://github.com/ThiagoSoares10" target="_blank"><img src="imagem/icon-github.svg"
-                        class="cabecalho-redes-social">
+            <div class="contatos-circulo">
+                <a href="https://github.com/ThiagoSoares10" target="_blank" rel="noopener noreferrer"
+                    class="contatos-link">
+
+                    <img src="imagem/icon-github.svg" class="contatos-redes-social-img">
                 </a>
             </div>
 
-            <div class="cabecalho-circulo-icons-social">
-                <a href="https://www.instagram.com/ts.thiiagosoares/?igsh=Mnp1YXczZmp0cHZ4#" target="_blank"><img
-                        src="imagem/icon-instagram.svg" class="cabecalho-redes-social">
+            <div class="contatos-circulo">
+                <a href="https://www.instagram.com/ts.thiiagosoares?igsh=Mnp1YXczZmp0cHZ4" target="_blank"
+                    rel="noopener noreferrer" class="contatos-link">
+
+                    <img src="imagem/icon-instagram.svg" class="contatos-redes-social-img">
                 </a>
             </div>
         </div>
 
-        <ul class="contatos-menu">
+        <ul class="menu-link">
             <li><a href="#inicio">Início</a></li>
             <li><a href="#sobre">Sobre</a></li>
             <li><a href="#projetos">Projetos</a></li>
@@ -148,7 +163,7 @@
         </ul>
     </section>
 
-    <hr>
+    <hr class="linha-horizontal">
 
     <footer>
         <p class="footer-paragrafo">©2025 Thiago Soares - Todos os direitos reservados</p>
